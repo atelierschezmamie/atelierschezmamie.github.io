@@ -491,7 +491,6 @@ span .ateliers_item {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    align-items: center;
 }
 
 .contact_part p {
