@@ -559,3 +559,37 @@ h4 {
 
 }
 
+.tuto_part {
+    display: flex;
+    gap: 4rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+}
+
+.tuto_part_style p {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .tuto_part {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.materiel {
+    color:#E25529;
+    font-family: 'Gerlick';
+}
+
+.materiel_list {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #001b57;
+    padding-left: 0px;
+}
