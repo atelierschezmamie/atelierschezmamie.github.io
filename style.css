@@ -2,8 +2,7 @@ ul {
     list-style-type: none;
 }
 
-body
-{
+body {
     margin: 0;
     padding: 0;
     background-color: #fff3e1;
@@ -59,6 +58,7 @@ a {
     .menu {
         display: none
     }
+
     .mamie_img {
         padding-right: 40px;
     }
@@ -67,7 +67,7 @@ a {
 @font-face {
     font-family: 'Gerlick';
     src: url('/fonts/Gerlick-vmVLA.woff') format('woff');
-  }
+}
 
 h1 {
     font-family: 'Gerlick';
@@ -79,7 +79,7 @@ h1 {
 
 h2 {
     font-family: 'Gerlick';
-    color:#E25529;
+    color: #E25529;
 }
 
 p {
@@ -93,7 +93,7 @@ p {
     display: flex;
     justify-content: center;
 }
- 
+
 h3,
 h4,
 a,
@@ -118,7 +118,7 @@ h2 {
 }
 
 .member_name {
-    color:#E25529;
+    color: #E25529;
     font-family: 'Gerlick';
 }
 
@@ -133,7 +133,7 @@ h2 {
     gap: 20px;
 }
 
-h2{
+h2 {
     padding-top: 60px;
 }
 
@@ -220,9 +220,9 @@ span .ateliers_item {
 }
 
 .footer_column {
-        flex: 1 1 200px;
-        text-align: center;
-        min-height: 150px;
+    flex: 1 1 200px;
+    text-align: center;
+    min-height: 150px;
 }
 
 .footer_column h4 {
@@ -244,7 +244,7 @@ span .ateliers_item {
     color: #001b57;
 }
 
-.footer_column a{
+.footer_column a {
     text-decoration: none;
     color: #001b57;
     transition: color 0.3s;
@@ -264,14 +264,17 @@ span .ateliers_item {
         flex-direction: column;
         align-items: flex-start;
     }
+
     .index_items {
         display: flex;
         flex-direction: column;
     }
+
     .title_index {
         display: flex;
         flex-direction: column;
     }
+
     h2 {
         padding-top: 0px;
     }
@@ -424,7 +427,7 @@ span .ateliers_item {
     width: 150px;
 }
 
-.member_part{
+.member_part {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -455,6 +458,7 @@ span .ateliers_item {
 }
 
 @media (max-width: 768px) {
+
     .member,
     .member_right {
         flex-direction: column;
@@ -582,7 +586,7 @@ h4 {
 }
 
 .materiel {
-    color:#E25529;
+    color: #E25529;
     font-family: 'Gerlick';
 }
 
@@ -594,10 +598,12 @@ h4 {
     padding-left: 0px;
 }
 
-.fleurs-slide img {
+.fleurs-slide img,
+.repassage-slide img {
     height: 30rem;
     width: 20rem;
 }
+
 .carousel {
     position: relative;
     max-width: 600px;
@@ -608,7 +614,7 @@ h4 {
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    background-color:#9BD3D8;
+    background-color: #9BD3D8;
     border-radius: 10px;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -616,17 +622,20 @@ h4 {
     padding-right: 4rem;
 }
 
-.fleurs-slide {
+.fleurs-slide,
+.repassage-slide {
     min-width: 100%;
     display: none;
     text-align: center;
 }
 
-.fleurs-slide.active {
+.fleurs-slide.active,
+.repassage-slide.active {
     display: block;
 }
 
-.fleurs-slide img {
+.fleurs-slide img,
+.repassage-slide img {
     max-width: 100%;
     border-radius: 10px;
 }
@@ -657,19 +666,44 @@ button:hover {
     right: 10px;
 }
 
-.mockup-fleur {
+.mockup-fleur,
+.mockup-repassage {
     height: 300px;
     width: 300px;
 }
 
 
 @media (max-width: 768px) {
-    .fleurs-slide img {
+
+    .fleurs-slide img,
+    .repassage-slide img {
         height: 15rem;
         width: 15rem;
     }
-    .mockup-fleur {
+
+    .mockup-fleur,
+    .mockup-repassage {
         height: 15rem;
         width: 15rem;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .fleurs-slide img,
+    .repassage-slide img {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .mockup-fleur,
+    .mockup-repassage {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .slides {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }

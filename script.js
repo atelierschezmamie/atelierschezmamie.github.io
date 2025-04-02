@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Gestion du menu hamburger
     const hamburger = document.querySelector(".hamburger");
     const menu = document.querySelector(".menu");
 
@@ -15,30 +16,29 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         console.error("Éléments .hamburger ou .menu introuvables dans le DOM.");
     }
-});
-document.addEventListener("DOMContentLoaded", function () {
-    let slides = document.querySelectorAll(".fleurs-slide");
-    let currentSlide = 0;
-    let totalSlides = slides.length;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.remove("active");
-            if (i === index) {
-                slide.classList.add("active");
-            }
+    // Gestion des carrousels
+    document.querySelectorAll(".carousel").forEach(carousel => {
+        let slides = carousel.querySelectorAll(".fleurs-slide, .repassage-slide");
+        let currentSlide = 0;
+        let totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("active", i === index);
+            });
+        }
+
+        carousel.querySelector(".next").addEventListener("click", function () {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
         });
-    }
 
-    document.querySelector(".next").addEventListener("click", function () {
-        currentSlide = (currentSlide + 1) % totalSlides;
+        carousel.querySelector(".prev").addEventListener("click", function () {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        });
+
         showSlide(currentSlide);
     });
-
-    document.querySelector(".prev").addEventListener("click", function () {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        showSlide(currentSlide);
-    });
-    
-    showSlide(currentSlide);
 });
